@@ -1,0 +1,8 @@
+simulation:
+  tick_seconds: 1
+security:
+  low_confidence_threshold: 0.40
+  high_confidence_threshold: 0.75
+  safe_mode_strategy:
+    fail_safe: "Stop data exchange, allow minimal charging"
+    fail_operational: "Continue charging with restrictions and active alerting"
