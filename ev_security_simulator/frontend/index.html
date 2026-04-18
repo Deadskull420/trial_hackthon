@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EV Security Simulator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>EV Charging Cybersecurity Simulator</h1>
+      <p>CAN protocol session monitor with dynamic threat injection</p>
+    </header>
+
+    <main class="grid">
+      <section class="card controls">
+        <h2>Simulation Controls</h2>
+        <div class="row">
+          <button id="startBtn">Start</button>
+          <button id="stopBtn">Stop</button>
+        </div>
+        <div class="row">
+          <select id="threatSelect"></select>
+          <button id="injectBtn">Inject Attack</button>
+        </div>
+        <p id="simStatus">Status: idle</p>
+      </section>
+
+      <section class="card risk">
+        <h2>Risk Level</h2>
+        <div id="riskIndicator" class="risk-badge low">LOW</div>
+        <p id="riskReason">No threats detected</p>
+      </section>
+
+      <section class="card">
+        <h2>Threat Detection Panel</h2>
+        <pre id="detectionPanel">Awaiting data...</pre>
+      </section>
+
+      <section class="card">
+        <h2>Attack Path / Affected Components</h2>
+        <div id="threatDetails">Select a threat scenario.</div>
+      </section>
+
+      <section class="card stream full-width">
+        <h2>Live CAN Message Stream</h2>
+        <div id="canStream"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
